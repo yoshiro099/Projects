@@ -1,0 +1,574 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+
+    --bg-black-900:#f2f2fc;
+    --bg-black-100:#fdf9ff;
+    --bg-black-50:#e8dfec;
+    --text-black-900:#302e4d;
+    --text-black-700: #504e70;
+    
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    content: "";
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    background-image: url(./images/superduper.jpg);
+    overflow-y: scroll;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+}
+/*  =================navbar section!==============-- */
+.header1 {
+    position: sticky;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    padding: 1.3rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+h1 {
+    color: #deebee;
+}
+
+.nav1 {
+    color: #deebee;
+    position: relative;
+    text-decoration: none;
+}
+
+.nav1::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: crimson;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.nav1:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.header1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(50px);
+    z-index: -1;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+.header1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.logo {
+    font-size: 2rem;
+    color: #deebee;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar .nav1 {
+    font-size: 1.15rem;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2.5rem;
+}
+
+
+
+#check  {
+    display: none;
+}
+
+.icons {
+    position: absolute;
+    right: 5%;
+    font-size: 2.8rem;
+    color: #deebee;
+    cursor: pointer;
+    display: none;
+
+}
+
+/* BREAKPOINTS */
+@media (max-width: 992px) {
+    .header1 {
+        padding: 1.3rem 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .icons {
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    .icons #close-icon {
+        display: none;
+    }
+
+        #check:checked~.icons #close-icon {
+            display: block;
+        }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: rgba(0, 0, 0, .1);
+        backdrop-filter: blur(50px);
+        box-shadow: 0  .5rem 1rem rgba(0, 0, 0, .1);
+        overflow: hidden;
+        transition: .3s ease;
+    }
+
+    #check:checked~.navbar {
+        height: 17.7rem;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: .3s ease;
+    }
+
+    #check:checked~.navbar a {
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay: calc(.15s * var(--i));
+    }
+}
+/* <!-- =================end of sidebar section!============== --> */
+
+/* ============ Main content ============= */
+.main {
+    padding: 95px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.main .left {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.main .left h3 {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 46px;
+}
+
+.main .left h3 span {
+    color: crimson;
+}
+
+.main .left p {
+    color:#EDEADE;
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+.main .right img {
+    width: 500px;
+}
+
+.btn  {
+    display: block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #333;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+}
+
+.btn span{
+    position: relative;
+    z-index: 2;
+  }
+
+.btn::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ff003b;
+    transition: all .35s;
+}
+
+.btn:hover {
+    color: #fff;
+}
+
+.btn:hover:after {
+    width: 100%;
+}
+/* ============ End of Main content ============= */
+
+/* =============== Skills Code ================= */
+
+.skills {
+    padding: 110px 85px 0;
+    margin-bottom: 100px;
+}
+
+.skills h5,
+.about .right h3,
+.porfolio .header h3,
+.feedback h3 {
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+.skills .skill-items {
+    display: flex;
+    margin-top: 70px;
+    gap: 30px;
+}
+
+.skills .skill-items .item {
+    background-color:#7393B3;
+    width: 25%;
+    border-radius: 10px;
+    padding: 32px;
+    border-bottom: 4px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.skills .skill-items .item:hover {
+    border-color: crimson;
+}
+
+.skills .skill-items .item .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+    margin-bottom: 22px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+}
+
+.skills .skill-items .item .icon i {
+    font-size: 26px;
+    color: crimson;
+}
+
+.skills .skill-items .item h4,
+.porfolio .portfo-items .item .info h4 {
+    font-size: 18px;
+}
+
+.skills .skill-items .item p {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 22px;
+    color: #1c1e53;
+}
+/* ===============End of Skills Code ================= */
+/* -------------------- About Me ------------- */
+
+h3 {
+    color: #deebee;
+}
+
+.about {
+    position: relative;
+    padding: 110px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.about .left {
+    border-radius: 10px 10px 0 0;
+}
+
+.about .left img {
+    width: 440px;
+    position: relative;
+    object-fit: cover;
+    
+}
+
+
+
+.about .right p{
+    font-size: 16px;
+    margin-top: 30px;
+    color: #deebee;
+}
+
+
+
+/* --------------------End of About Me ------------- */
+/* ----------------Portfolio---------------- */
+
+.info h5 {
+    font-size: 40px;
+}
+
+.portfolio {
+
+    padding: 110px 85px;
+}
+
+.portfolio .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.portfolio .header button {
+    background-color: crimson;
+    padding: 10px 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    border-radius: 10px;
+}
+
+.portfolio .header button i {
+    font-size: 26px;
+}
+
+.portfolio .portfo-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.portfolio .portfo-items .item {
+    width: 30%;
+    background-color: #fff;
+    border-radius: 10px;
+    border-bottom: 4px solid transparent;
+    cursor: pointer;
+    transition: all 0.4s;
+    
+}
+.portfolio .portfo-items .item:hover {
+    border-color: crimson;
+    scale: 1.1;
+    transition: all 0.2s;
+    
+}
+
+.portfolio .portfo-items .item img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 10px 10px 0px 0px;
+    
+}
+
+.portfolio .portfo-items .item .info {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 20px 32px 42px;
+    
+}
+
+.portfolio .portfo-items .item .info p {
+    font-size: 13px;
+}
+
+.portfolio .portfo-items .item .info a {
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-color: crimson;
+}
+
+.portfolio .portfo-items .item .info a i {
+    margin-left: 2px;
+    font-size: 16px;
+}
+
+
+
+/* ----------------End ofPortfolio---------------- */
+/* ----------------Feedback---------------- */
+
+.feedback {
+    padding: 110px 85px;
+
+}
+
+.feedback .customers {
+    margin-top: 50px;
+    display: flex;
+    gap: 40px;
+}
+
+.feedback .customers .item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 2px solid #7393B3;
+    border-radius: 10px;
+    padding: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.feedback .customers .item .rating {
+    color: yellow;
+    font-size: 22px;
+}
+
+.feedback .customers .item:hover {
+    border-color: #1c1e53;
+}
+
+.feedback .customers .item p {
+    line-height: 22px;
+    font-size: 14px;
+}
+
+.feedback .customers .item .user {
+    display: flex;
+    align-items: center; 
+    gap: 10px;
+}
+
+.feedback .customers .item .user img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.feedback .customers .item .user h5 {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+
+.feedback .customers .item .user p {
+    font-size: 12px;
+}
+
+/* ----------------End of Feedback---------------- */
+/* ---------------- Footer ---------------- */
+
+
+footer .logo {
+    display: flex;
+    align-items: center;
+}
+
+footer .logo a {                                                    
+    margin-left: 8px;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+
+footer .logo img {
+    width: 40px;
+    height: 40px;
+}
+
+footer .top ul {
+    display: flex;
+    gap: 40px;
+    list-style-type: none;
+}
+
+footer {
+    background-color: #deebee;
+    padding: 85px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .top,
+footer .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .top .social-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+}
+
+footer .separator {
+    width: 100%;
+    height: 1px;
+    background-color: #282928;
+    margin: 30px 0 20px;
+}
+
+footer .bottom p {
+    font-size: 12px;
+}
+
+footer .bottom .links a {
+    font-size: 12px;
+    margin-left: 14px;
+}
+/* ----------------End of Footer---------------- */
