@@ -1,0 +1,490 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: grid;
+    content: "";
+    width: 100%;
+    height: 100%;
+    /* backdrop-filter: blur(5px); */
+    background-position: center;
+    background-size: cover;
+    background-color: #fff;
+    background-image: url('./img/5.png');
+    min-height: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+}
+/*  =================navbar section!==============-- */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: #11101b;
+    display: block;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    transition: top 0.3s;
+}
+
+nav .navbar {
+    position: relative;
+    height: 100%;
+    max-width: 1920px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+nav .navbar .logo img{
+    width: 120px;
+    height: 40px;
+}
+
+nav .navbar .nav-apply a{
+    color: #f9f9f9;
+    background-color: #98C346;
+    padding: 12px;
+    border-radius: 20px;
+}
+nav .navbar .nav-links {
+    height: 100%;
+    line-height: 70px;
+}
+
+nav .navbar .nav-links .links {
+    display: flex;
+}
+
+nav .navbar .nav-links .links li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0 14px;
+}
+
+nav .navbar .nav-links .links li a {
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+
+}
+
+nav .navbar .nav-links .links li .arrow {
+    height: 100%;
+    width: 22px;
+    text-align: center;
+    color: #fff;
+    line-height: 70px;
+    transition: all 0.3s ease;
+}
+
+nav .navbar .nav-links .links li:hover .htmlcss-arrow {
+    transform: rotate(180deg);
+}
+
+.navbar .nav-links .links .sub-menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background: #666;
+    line-height: 40px;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.navbar .nav-links .links .sub-menu li {
+    padding: 0 22px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar .nav-links .links .sub-menu li a{
+    font-size: 15px;
+    font: 500;
+}
+
+nav .navbar .nav-links .links li:hover .main-sub {
+    display: block;
+}
+
+
+/* =============== Responsive ============== */
+
+
+
+/* =============== end of Responsive ============== */
+
+
+/* ===============end of nav bar ============== */
+
+/* =============== wrapper ============== */
+.main {
+    max-height: fit-content;
+    padding: 90px 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 5em;
+    margin-bottom: 490px;
+}
+
+.main .left {
+    color: #11101b;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.main .left p {
+    color: #282928;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 35px;
+    gap: 10px;
+}
+
+
+/* ===============end of wrapper============== */
+
+
+/* =============== About ============== */
+
+.about {
+    background-color: white;
+    padding: 100px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.about .right {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 0 20px 20px 0;
+    gap: 20px;
+}
+
+.about .right h2 {
+    font-size: 30px;
+} 
+
+.about .left img {
+    height: 470px;
+    width: 540px;
+    border-radius: 20px;
+}
+
+.about .right p {
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+
+
+/* =============== end of about ============== */
+
+/* =============== kickstart ============== */
+
+.kickstart img{
+    max-width: 100%;
+    max-height: 100%;    
+}
+
+/* =============== end of kickstart ============== */
+
+
+
+/* =============== Mission ============== */
+
+.mission {
+    display: flex;
+    background-color: white;
+    padding: 20px;
+}
+
+.mission1 {
+    left: 50px;
+    background-color: #98C346;
+    padding: 15px;
+    border-radius: 20px;
+    padding: 110px 20px;
+}
+
+.mission h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.mission p {
+    text-align: center;
+    font-size: 30px;
+}
+
+.mission img {
+    height: 300px;
+    width: 300px;
+    left: 14em;
+    margin-top: 30px;
+}
+
+/* =============== end of mission ============== */
+
+/* =============== Vision ============== */
+
+.vision {
+    background-color: #f9f9f9;
+    display: flex;
+    padding: 20px;
+}
+
+.vision1 {
+    left: 15em;
+    padding: 15px;
+    background-color: #98C346;
+    border-radius: 20px;
+    padding: 110px 20px ;
+}
+
+.vision h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.vision p {
+    text-align: center;
+    font-size: 30px;
+}
+
+.vision img {
+    height: 200px;
+    width: 250px;  
+    margin-top: 80px;
+    left: 7em;
+
+}
+
+
+
+/* =============== end of Vision ============== */
+
+
+
+/* =============== Programs ============== */
+.container {
+    /* max-width: 1120px; */
+    width: 100%;
+    background-color: gray;
+}
+
+
+
+.card .image-box {
+    height: 200px;
+}
+
+.card .image-box img {
+    height: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.card .profile-details {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    padding: 15px;
+}
+
+.card .profile-details .name {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.card .profile-details .details {
+    font-size: 15px;
+    font-weight: 400;
+    color: #666;
+}
+
+/* =============== end of Programs ============== */
+
+/* =============== Contact and Location ============== */
+.contact-location {
+    background-color: #f9f9f9;
+    padding: 200px;
+}
+
+.contact {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 0px 10px 0px #666;
+}
+
+
+.contact-loc {
+    width: 100%;
+    height: auto;
+    flex: 50%;
+}
+
+.contact-loc iframe{
+    width: 100%;
+    height: 100%;
+
+}
+
+.contact-form {
+    width: 100%;
+    height: auto;
+    flex: 50%;
+    padding: 30px;
+    text-align: center;
+}
+
+.contact-form h1 {
+    margin-bottom: 10px;
+}
+
+
+.contact-form1 {
+    width: 100%;
+    height: 40px;
+    color: #000;
+    border: 1px solid #bcbcbc;
+    border-radius: 50px;
+    outline: none;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.contact-form1::placeholder {
+    color: #aaa;
+}
+
+.contact-form-area {
+    width: 100%;
+    height: 130px;
+    color: #000;
+    border: 1px solid #bcbcbc;
+    border-radius: 10px;
+    outline: none;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.contact-form-area::placeholder {
+    color: #aaa;
+}
+
+.form-button {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background: #98C346;
+    color: #fff;
+    text-transform: uppercase;
+    padding:  10px 0;
+    cursor: pointer;
+    font-size: 18px;
+}
+/* =============== end of Contact/location ============== */
+
+
+
+/* =============== Footer ============== */
+
+footer .logo {
+    display: flex;
+    align-items: center;
+}
+
+footer .logo a {
+    margin-left: 8px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+footer .logo img {
+    width: 144px;
+    height: 50px;
+}
+
+footer .top ul{
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+footer .top ul li a{
+    color: white;
+}
+
+footer .top .social-link a{
+    color: white;
+}
+
+footer {
+    background-color: #282928;
+    padding: 85px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .top,
+footer .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .logo a{
+    color: #98C346;
+}
+
+footer .top .social-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+}
+
+footer .separator {
+    width: 100%;
+    height: 1px;
+    background-color: #98C346;
+    margin: 30px 0 20px;
+}
+
+footer .bottom p {
+    font-size: 12px;
+}
+
+/* =============== end of Footer ============== */
+
+
+
