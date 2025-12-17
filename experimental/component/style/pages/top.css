@@ -1,186 +1,251 @@
-.top__pisoPayRoll {
-  position: relative;
+@use '../tools/media-queries' as mq;
+
+.top {
+
+  &__pisoPayRoll {
+    position: relative;
+  }
+
+  &__pisoPayRoll-bg {
+    background-image: url('/component/image/bgHomePayroll.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    min-width: 350px;
+  }
+
+  &__pisoPayRoll-container {
+    margin: auto;
+    padding-inline: 30px;
+    padding-block: 70px;
+  }
+
+  &__pisoPayRoll-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__pisoPayRoll-content {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 70px;
+    text-align: center;
+    justify-items: center
+  }
+
+  &__pisoPayRoll-content-p {
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 25px;
+  }
+
+  &__pisoPayRoll-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    @include mq.tablet {
+      max-width: 800px;
+    }
+  }
+
+  &__pisoPayRoll-coming-soon-image {
+    top: 0;
+    right: 0;
+    transform: translate(30%, -50%);
+    position: absolute;
+    @include mq.tablet {
+      max-width: 140px;
+    }
+  }
+
+  &__pisoPayRoll-form {
+    padding-block: 30px;
+    gap: 2px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__pisoPayRoll-email-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__pisoPayRoll-email {
+    border: 2px solid #2a96e9;
+    outline: 0;
+    padding: 13px;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__pisoPayRoll-getStarted {
+    background-color: #36a8ff;
+    color: #fff;
+    padding-block: 15px;
+    padding-inline: 30px;
+    text-align: center;
+  }
+
+  &__pisoPayRoll-costEstimate {
+    background-color: #144a9a;
+    color: #fff;
+    padding-block: 15px;
+    padding-inline: 30px;
+  }
+
+  &__pisoPayRoll-featureTitle {
+    padding-block: 30px;
+    font-size: 24px;
+    font-weight: 300;
+    color: #4c4c4c;
+    text-align: center;
+  }
+
+  &__pisoPayRoll-features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__pisoPayRoll-features-list {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    padding-inline: 10px;
+    position: relative;
+
+    &::before {
+      top: 0;
+      right: 0;
+      position: absolute;
+      content: '';
+      background-color: #4c4c4c;
+      width: 1px;
+      height: 100%;
+      display: block;
+      opacity: 0.5;
+    }
+  }
+
+  &__pisoPayRoll-features-list1 {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    padding-inline: 10px;
+  }
+
+  &__pisoPayRoll-feature-icon {
+    width: 69px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    font-size: 40px;
+  }
+
+  &__pisoPayRoll-features-title {
+    font-size: 16px;
+    color: #195483;
+    font-weight: bold;
+    margin: 10px 0 4px;
+  }
+
+  &__pisoPayRoll-features-p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 14px;
+    color: #195483;
+  }
+
+  &__paymentSolution {
+    position: relative;
+  }
+
+  &__paymentSolution-bg {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: url('/component/image/bgHomePG.jpg');
+    width: 100%;
+    height: 100vh;
+    min-width: 350px;
+  }
+
+  &__paymentSolution-icon-bg {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: url('/component/image/bgHomePGPartners3.png');
+    width: 100%;
+    height: 100vh;
+    min-width: 350px;
+    @include mq.tablet {
+      background-image: none;
+    }
+  }
+
+  &__paymentSolution-container {
+    margin: auto;
+    padding-inline: 30px;
+  }
+
+  &__paymentSolution-headerTitle {
+    padding-block: 100px;
+    text-align: center;
+    display: grid;
+    gap: 10px;
+  }
+
+  &__paymentSolution-title {
+    font-size: 48px;
+  }
+
+  &__paymentSolution-subTitle {
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+  &__paymentSolution-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__paymentSolution-buttons-container {
+    position: absolute;
+    bottom: 100px;
+    display: flex;
+    gap: 5px;
+    @include mq.tablet {
+      bottom: 50px;
+    }
+  }
+
+  &__paymentSolution-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: wrap;
+    max-width: 600px;
+    gap: 15px;
+    display: none;
+    @include mq.tablet {
+      display: flex;
+    }
+  }
+
+  &__paymentSolution-icon {
+    width: 120px;
+    aspect-ratio: 1 / 1;
+  }
+
+  &__paymentSolution-buttons {
+    padding-block: 15px;
+    padding-inline: 30px;
+    background: red;
+  }
 }
-.top__pisoPayRoll-bg {
-  background-image: url("/component/image/bgHomePayroll.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  width: 100%;
-  height: 100%;
-  min-width: 350px;
-}
-.top__pisoPayRoll-container {
-  margin: auto;
-  padding-inline: 30px;
-  padding-block: 70px;
-}
-.top__pisoPayRoll-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.top__pisoPayRoll-content {
-  display: grid;
-  gap: 10px;
-  margin-bottom: 70px;
-  text-align: center;
-  justify-items: center;
-}
-.top__pisoPayRoll-content-p {
-  font-size: 25px;
-  font-weight: bold;
-  line-height: 25px;
-}
-.top__pisoPayRoll-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-.top__pisoPayRoll-coming-soon-image {
-  top: 0;
-  right: 0;
-  transform: translate(30%, -50%);
-  position: absolute;
-}
-.top__pisoPayRoll-form {
-  padding-block: 30px;
-  gap: 2px;
-  display: grid;
-  align-items: center;
-  grid-template-columns: repeat(3, 1fr);
-}
-.top__pisoPayRoll-email-container {
-  width: 100%;
-  height: 100%;
-}
-.top__pisoPayRoll-email {
-  border: 2px solid #2a96e9;
-  outline: 0;
-  padding: 13px;
-  width: 100%;
-  height: 100%;
-}
-.top__pisoPayRoll-getStarted {
-  background-color: #36a8ff;
-  color: #fff;
-  padding-block: 15px;
-  padding-inline: 30px;
-  text-align: center;
-}
-.top__pisoPayRoll-costEstimate {
-  background-color: #144a9a;
-  color: #fff;
-  padding-block: 15px;
-  padding-inline: 30px;
-}
-.top__pisoPayRoll-featureTitle {
-  padding-block: 30px;
-  font-size: 24px;
-  font-weight: 300;
-  color: #4c4c4c;
-  text-align: center;
-}
-.top__pisoPayRoll-features {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-.top__pisoPayRoll-features-list {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  padding-inline: 10px;
-  position: relative;
-}
-.top__pisoPayRoll-features-list::before {
-  top: 0;
-  right: 0;
-  position: absolute;
-  content: "";
-  background-color: #4c4c4c;
-  width: 1px;
-  height: 100%;
-  display: block;
-  opacity: 0.5;
-}
-.top__pisoPayRoll-features-list1 {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  padding-inline: 10px;
-}
-.top__pisoPayRoll-feature-icon {
-  width: 69px;
-  height: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px;
-  font-size: 40px;
-}
-.top__pisoPayRoll-features-title {
-  font-size: 16px;
-  color: #195483;
-  font-weight: bold;
-  margin: 10px 0 4px;
-}
-.top__pisoPayRoll-features-p {
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 14px;
-  color: #195483;
-}
-.top__paymentSolution {
-  position: relative;
-}
-.top__paymentSolution-bg {
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-image: url("/component/image/bgHomePG.jpg");
-  width: 100%;
-  height: 100vh;
-  min-width: 350px;
-}
-.top__paymentSolution-icon-bg {
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-image: url("/component/image/bgHomePGPartners3.png");
-  width: 100%;
-  height: 100vh;
-  min-width: 350px;
-}
-.top__paymentSolution-container {
-  margin: auto;
-  padding-inline: 30px;
-}
-.top__paymentSolution-headerTitle {
-  padding-block: 100px;
-  text-align: center;
-  display: grid;
-  gap: 10px;
-}
-.top__paymentSolution-title {
-  font-size: 48px;
-}
-.top__paymentSolution-subTitle {
-  font-size: 25px;
-  line-height: 25px;
-}
-.top__paymentSolution-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.top__paymentSolution-buttons-container {
-  position: absolute;
-  bottom: 100px;
-  display: flex;
-  gap: 5px;
-}
-.top__paymentSolution-buttons {
-  padding-block: 15px;
-  padding-inline: 30px;
-  background: red;
-}/*# sourceMappingURL=top.css.map */
