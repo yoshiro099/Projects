@@ -1,0 +1,14 @@
+.header {
+  position: relative;
+
+  &__sidebar-link {
+    position: absolute;
+    left: -150px;
+    transition: 0.3s ease;
+  }
+
+  &__sidebar-link-container {
+    display: flex;
+    flex-direction: column;
+  }
+}

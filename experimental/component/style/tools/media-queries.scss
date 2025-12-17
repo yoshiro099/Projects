@@ -1,0 +1,23 @@
+@mixin lt {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin max($max-width: 0) {
+  @media (max-width: $max-width) {
+    @content;
+  }
+}

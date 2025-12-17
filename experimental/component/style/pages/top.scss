@@ -1,0 +1,219 @@
+.top {
+
+  &__pisoPayRoll {
+    position: relative;
+  }
+
+  &__pisoPayRoll-bg {
+    background-image: url('/component/image/bgHomePayroll.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    min-width: 350px;
+  }
+
+  &__pisoPayRoll-container {
+    margin: auto;
+    padding-inline: 30px;
+    padding-block: 70px;
+  }
+
+  &__pisoPayRoll-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__pisoPayRoll-content {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 70px;
+    text-align: center;
+    justify-items: center
+  }
+
+  &__pisoPayRoll-content-p {
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 25px;
+  }
+
+  &__pisoPayRoll-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  &__pisoPayRoll-coming-soon-image {
+    top: 0;
+    right: 0;
+    transform: translate(30%, -50%);
+    position: absolute;
+  }
+
+  &__pisoPayRoll-form {
+    padding-block: 30px;
+    gap: 2px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__pisoPayRoll-email-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__pisoPayRoll-email {
+    border: 2px solid #2a96e9;
+    outline: 0;
+    padding: 13px;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__pisoPayRoll-getStarted {
+    background-color: #36a8ff;
+    color: #fff;
+    padding-block: 15px;
+    padding-inline: 30px;
+    text-align: center;
+  }
+
+  &__pisoPayRoll-costEstimate {
+    background-color: #144a9a;
+    color: #fff;
+    padding-block: 15px;
+    padding-inline: 30px;
+  }
+
+  &__pisoPayRoll-featureTitle {
+    padding-block: 30px;
+    font-size: 24px;
+    font-weight: 300;
+    color: #4c4c4c;
+    text-align: center;
+  }
+
+  &__pisoPayRoll-features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__pisoPayRoll-features-list {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    padding-inline: 10px;
+    position: relative;
+
+    &::before {
+      top: 0;
+      right: 0;
+      position: absolute;
+      content: '';
+      background-color: #4c4c4c;
+      width: 1px;
+      height: 100%;
+      display: block;
+      opacity: 0.5;
+    }
+  }
+
+  &__pisoPayRoll-features-list1 {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    padding-inline: 10px;
+  }
+
+  &__pisoPayRoll-feature-icon {
+    width: 69px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    font-size: 40px;
+  }
+
+  &__pisoPayRoll-features-title {
+    font-size: 16px;
+    color: #195483;
+    font-weight: bold;
+    margin: 10px 0 4px;
+  }
+
+  &__pisoPayRoll-features-p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 14px;
+    color: #195483;
+  }
+
+  &__paymentSolution {
+    position: relative;
+  }
+
+  &__paymentSolution-bg {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: url('/component/image/bgHomePG.jpg');
+    width: 100%;
+    height: 100vh;
+    min-width: 350px;
+  }
+
+  &__paymentSolution-icon-bg {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: url('/component/image/bgHomePGPartners3.png');
+    width: 100%;
+    height: 100vh;
+    min-width: 350px;
+  }
+
+  &__paymentSolution-container {
+    margin: auto;
+    padding-inline: 30px;
+  }
+
+  &__paymentSolution-headerTitle {
+    padding-block: 100px;
+    text-align: center;
+    display: grid;
+    gap: 10px;
+  }
+
+  &__paymentSolution-title {
+    font-size: 48px;
+  }
+
+  &__paymentSolution-subTitle {
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+  &__paymentSolution-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__paymentSolution-buttons-container {
+    position: absolute;
+    bottom: 100px;
+    display: flex;
+    gap: 5px;
+  }
+
+  &__paymentSolution-buttons {
+    padding-block: 15px;
+    padding-inline: 30px;
+    background: red;
+  }
+}
